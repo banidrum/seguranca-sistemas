@@ -74,3 +74,40 @@ func verifySignature(publicKey rsa.PublicKey, hashSum []byte, signature []byte) 
 
 	return ""
 }
+
+// func createSelfSignedCertificate() {
+	
+// 	cert := &x509.Certificate{
+// 		SerialNumber: big.NewInt(1658),
+// 		Subject: pkix.Name{
+// 			Organization:  []string{""},
+// 			Country:       []string{""},
+// 			Province:      []string{""},
+// 			Locality:      []string{""},
+// 			StreetAddress: []string{""},
+// 			PostalCode:    []string{""},
+// 		},
+// 		IPAddresses:  []net.IP{net.IPv4(127, 0, 0, 1), net.IPv6loopback},
+// 		NotBefore:    time.Now(),
+// 		NotAfter:     time.Now().AddDate(10, 0, 0),
+// 		SubjectKeyId: []byte{1, 2, 3, 4, 6},
+// 		ExtKeyUsage:  []x509.ExtKeyUsage{x509.ExtKeyUsageClientAuth, x509.ExtKeyUsageServerAuth},
+// 		KeyUsage:     x509.KeyUsageDigitalSignature,
+// 	}
+
+// 	return cert
+// }
+
+// func createSelfSignedCertkey() {
+// 	certPrivKey, err := rsa.GenerateKey(rand.Reader, 4096)
+// 	if err != nil {
+// 		return err
+// 	}
+// }
+
+// func signCertificate() {
+// 	certBytes, err := x509.CreateCertificate(rand.Reader, cert, ca, &certPrivKey.PublicKey, caPrivKey)
+// 	if err != nil {
+// 		return err
+// 	}
+// }

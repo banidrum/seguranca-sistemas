@@ -45,6 +45,42 @@ Além disso, o Go Sec também sugere uma alteração para corrigir a vulnerabili
 
 Como foi demonstrado, o Go Sec pode ser um bom aliado para analisar o código e buscar vulnerabilidades de segurança em projetos escritos em Go.
 
+## Tabela de regras
+
+| Regra | Descrição |
+| ----- | --------  |
+| G101      | Procura por credenciais no código |
+| G102      | Bind para todas as interfaces          |
+| G103      | Audita o uso do bloco unsafe          |
+| G104      | Audita erros não checados          |
+| G106      | Audita o uso de ssh.InsecureIgnoreHostKey          |
+| G107      | Url fornecida para o request HTTP como entrada "manchada"          |
+| G108      | Endpoint de profiling automaticamente exposto em /debug/pprof          |
+| G109      | Potencial overflow de inteiro criado por strconv.Atoi na conversão para int16/32          |
+| G110      | Potencial vulnerabilidade de DoS via bomba de descompressão          |
+| G201      | Construção de query SQL usando formatação de string          |
+| G202      | Construção de query SQL usando concatenação de string          |
+| G203      | Uso de dados sem escape em template HTML          |
+| G204      | Audita o uso de execução de comando          |
+| G301      | Permissões ruins de arquivo ao criar um diretório          |
+| G302      | Permissões ruins de arquivo usado com chmod          |
+| G303      | Criando arquivo temporário usando um caminho previsível          |
+| G304      | Caminho de arquivo fornecido como entrada "manchada"          |
+| G305      | Passagem de arquivo ao extrair arquivo tar/zip          |
+| G306      | Permissões ruins de arquivo quando escreve para um novo arquivo          |
+| G307      | Defere um método que retorna um erro         |
+| G401      | Detecta o uso de DES, RC4, MD5 ou SHA1          |
+| G402      | Procura por configurações ruins de conexões TLS          |
+| G403      | Garante o comprimento mínimo de 2048 bits para a chave RSA          |
+| G404      | Fonte insegura de número aleatório (rand)          |
+| G501      | Lista de import bloqueado: crypto/md5         |
+| G502      | Lista de import bloqueado: crypto/des          |
+| G503      | Lista de import bloqueado: crypto/rc4         |
+| G504      | Lista de import bloqueado: net/http/cgi         |
+| G505      | Lista de import bloqueado: crypto/sha1 |
+| G601      | Aliasing de memória implícito dos itens em um uma declaração de range          |
+
+
 ## Licença
 
 [![CC BY-SA 4.0][cc-by-sa-shield]][cc-by-sa]
